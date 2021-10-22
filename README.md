@@ -1,2 +1,2 @@
-# My Portofolio
+# My Portfolio
 made with React
