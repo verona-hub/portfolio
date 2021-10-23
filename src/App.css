@@ -1,30 +1,47 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+}
+
+.pages-wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 5vh;
 }
 
 .Page {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
 }
 
 .page-one {
-  background-color: lightpink;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    margin-top: 5vh;
 }
 
 .page-two {
-  background-color: lightblue;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
 
 .page-three {
-  background-color: lightgreen;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.page-four {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    margin-bottom: 5vh;
+
 }

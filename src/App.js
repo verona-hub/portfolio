@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import PageOne from './components/Pages/PageOne';
 import PageTwo from './components/Pages/PageTwo';
 import PageThree from './components/Pages/PageThree';
+import PageFour from './components/Pages/PageFour';
 
 class App extends Component {
 
@@ -11,9 +12,12 @@ class App extends Component {
 
         return(
             <div className="App">
-                <PageOne />
-                <PageTwo />
-                <PageThree />
+                <div className="pages-wrapper">
+                    <PageOne/>
+                    <PageTwo/>
+                    <PageThree/>
+                    <PageFour />
+                </div>
             </div>
 
         );
