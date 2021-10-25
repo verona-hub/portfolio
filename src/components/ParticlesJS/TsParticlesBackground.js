@@ -2,6 +2,7 @@ import React  from "react";
 import Particles from "react-tsparticles";
 import TsParticlesConfig from "./TsParticlesConfig";
 
+
 const TsParticlesBackground = () => {
     return (
             <Particles
@@ -11,5 +12,6 @@ const TsParticlesBackground = () => {
             />
     );
 };
+
 
 export default TsParticlesBackground;
