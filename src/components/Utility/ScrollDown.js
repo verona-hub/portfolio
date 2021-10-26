@@ -6,7 +6,7 @@ const ScrollDown = () => {
 
     const scrollToPageTwo = () => {
         document
-            .querySelector('.scrollToPageTwo')
+            .querySelector('.page-two')
             .scrollIntoView({
                 behavior: 'smooth'
             });
