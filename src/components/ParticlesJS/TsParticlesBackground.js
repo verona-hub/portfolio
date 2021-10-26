@@ -8,7 +8,7 @@ const TsParticlesBackground = () => {
             <Particles
                 id="tsparticles"
                 options={ TsParticlesConfig }
-                className="canvas"
+                className="canvasTS"
             />
     );
 };

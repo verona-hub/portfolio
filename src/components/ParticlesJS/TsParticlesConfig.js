@@ -2,82 +2,109 @@ import React from 'react';
 
 
 const TsParticlesConfig = {
-    background: {
-        color: {
-            value: "#0d47a1",
+    "particles": {
+        "number": {
+            "value": 60,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
         },
+        "color": {
+            "value": "#ffffff"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+        },
+        "opacity": {
+            "value": 0.6,
+            "random": false,
+            "anim": {
+                "enable": true,
+                "speed": 0.2,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 0.5,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "bounce",
+            "bounce": true,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
     },
-    fpsLimit: 60,
-    interactivity: {
-        detectsOn: "canvas",
-        events: {
-            onClick: {
-                enable: true,
-                mode: "push",
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
             },
-            onHover: {
-                enable: true,
-                mode: "repulse",
+            "onclick": {
+                "enable": true,
+                "mode": "push"
             },
-            resize: true,
+            "resize": true
         },
-        modes: {
-            bubble: {
-                distance: 400,
-                duration: 2,
-                opacity: 0.8,
-                size: 40,
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
             },
-            push: {
-                quantity: 4,
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
             },
-            repulse: {
-                distance: 200,
-                duration: 0.4,
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
             },
-        },
+            "push": {
+                "particles_nb": 2
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
     },
-    particles: {
-        color: {
-            value: "#ffffff",
-        },
-        links: {
-            color: "#ffffff",
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-        },
-        collisions: {
-            enable: true,
-        },
-        move: {
-            direction: "none",
-            enable: true,
-            outMode: "bounce",
-            random: false,
-            speed: 6,
-            straight: false,
-        },
-        number: {
-            density: {
-                enable: true,
-                value_area: 800,
-            },
-            value: 80,
-        },
-        opacity: {
-            value: 0.5,
-        },
-        shape: {
-            type: "circle",
-        },
-        size: {
-            random: true,
-            value: 5,
-        },
-    },
-    detectRetina: true,
+    "retina_detect": true
 };
 
 export default TsParticlesConfig;

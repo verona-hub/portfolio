@@ -5,74 +5,98 @@
 }
 
 html {
-
+    color: white;
+    overflow: hidden;
 }
 
-body {
-    /*overflow: hidden;*/
+.Navbar {
+    background: #13151e;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
 }
+
+
+/*
++ Canvas
+*/
+
+.canvas {
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.canvasTS {
+    height: 100vh;
+}
+
+.ts-h1 {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-weight: 300;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    user-select: none;
+}
+
+
+/*
++ Scroll Down
+*/
+
+.ScrollDown {
+    position: relative;
+    bottom: 10vh;
+}
+
+.ScrollDown img {
+    width: 48px;
+}
+
+
+/*
++ Pages
+*/
 
 .pages-wrapper {
     height: 100vh;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
     position: relative;
-}
-
-.tsparticles-canvas-el {
-    /*overflow: hidden;*/
-}
-
-.react-particles-js-wrapper {
-    /*height: 100vh;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*overflow: hidden;*/
-    /*position: relative;*/
-    /*scroll-snap-align: start;*/
-}
-
-.react-particles {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    /*overflow-y: scroll;*/
-}
-
-.canvas {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
 }
 
 .Page {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    /*overflow-y: scroll;*/
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
     scroll-snap-align: start;
 }
 
 .page-one {
-    background: linear-gradient(to top, #0e0b4a, #140c33);
     color: white;
     font-size: 2.4rem;
-    /*margin-top: 5vh;*/
 }
 
-.page-two {
-    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-}
-
+.page-one,
 .page-three {
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    background: linear-gradient(to top, #0c0c27, #1d062d);
+    background: linear-gradient(to top, #0c0c27, #0d0f30);
 }
 
+.page-two,
 .page-four {
-    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-    /*margin-bottom: 5vh;*/
-
+    background: linear-gradient(to top, #1d062d, #0c0c27);
 }

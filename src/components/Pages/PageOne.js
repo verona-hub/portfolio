@@ -1,10 +1,18 @@
 import React from 'react';
+import TsParticlesBackground from "../ParticlesJS/TsParticlesBackground";
+import ReactParticlesJSBackground from '../ParticlesJS/ReactParticlesJSBackground';
+import ScrollDown from '../Utility/ScrollDown';
+
 
 
 const PageOne = () => {
     return (
         <div className="Page page-one">
-            <h1> Zoran G </h1>
+            <TsParticlesBackground />
+            {/*<ReactParticlesJSBackground />*/}
+
+            <h1 className="ts-h1"> Zoran G </h1>
+            <ScrollDown />
         </div>
     );
 };
