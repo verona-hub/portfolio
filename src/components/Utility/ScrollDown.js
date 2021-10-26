@@ -3,9 +3,19 @@ import arrow from '../../img/down-arrow.png';
 
 
 const ScrollDown = () => {
+
+    const scrollToPageTwo = () => {
+        document
+            .querySelector('.scrollToPageTwo')
+            .scrollIntoView({
+                behavior: 'smooth'
+            });
+    }
+
+
     return (
         <div className="ScrollDown" >
-            <img src={ arrow } alt="scroll down arrow" />
+            <img onClick={ scrollToPageTwo } src={ arrow } alt="scroll down arrow" />
         </div>
     );
 };

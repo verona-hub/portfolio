@@ -6,6 +6,12 @@ import ScrollDown from '../Utility/ScrollDown';
 
 
 const PageOne = () => {
+    // document
+    //     .querySelector('.scrollToPageTwo')
+    //     .scrollIntoView({ behavior: 'smooth'
+    // });
+
+
     return (
         <div className="Page page-one">
             <TsParticlesBackground />
