@@ -4,23 +4,19 @@ import ReactParticlesJSBackground from '../ParticlesJS/ReactParticlesJSBackgroun
 import ScrollDown from '../Utility/ScrollDown';
 
 
-
-const PageOne = () => {
-    // document
-    //     .querySelector('.scrollToPageTwo')
-    //     .scrollIntoView({ behavior: 'smooth'
-    // });
-
+const Hero = () => {
 
     return (
-        <div className="Page page-one">
+        <div className="Page Hero">
             <TsParticlesBackground />
             {/*<ReactParticlesJSBackground />*/}
 
             <h1 className="ts-h1"> Zoran G </h1>
+
             <ScrollDown />
         </div>
     );
 };
 
-export default PageOne;
+
+export default Hero;

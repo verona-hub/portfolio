@@ -56,12 +56,36 @@ html {
 */
 
 .ScrollDown {
+    cursor: pointer;
     position: relative;
-    bottom: 10vh;
 }
 
 .ScrollDown img {
-    width: 48px;
+    animation: move 3s linear infinite;
+    position: absolute;
+    width: 38px;
+}
+
+@keyframes move {
+    0% {
+        bottom: 5vh;
+    }
+
+    25% {
+        bottom: 3vh;
+    }
+
+    50% {
+        bottom: 1vh;
+    }
+
+    75% {
+        bottom: 3vh;
+    }
+
+    100% {
+        bottom: 5vh;
+    }
 }
 
 
@@ -85,18 +109,17 @@ html {
     scroll-snap-align: start;
 }
 
-.page-one {
+.Hero {
     color: white;
     font-size: 2.4rem;
 }
 
-.page-one,
+.Hero,
 .page-three {
-    background: linear-gradient(to top, #131319, #15151d);
-    background: linear-gradient(to top, #0e0e15, #15151d);
+    background: linear-gradient(to top, #0e0e15, #070728);
 }
 
 .page-two,
 .page-four {
-    background: linear-gradient(to top, #1d062d, #0c0c27);
+    background: linear-gradient(to top, #070728, #0e0e15);
 }

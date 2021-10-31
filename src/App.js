@@ -2,10 +2,8 @@ import React, { Component }  from "react";
 
 // Components
 import Navbar from './components/Navbar';
-import PageOne from './components/Pages/PageOne';
-import PageTwo from './components/Pages/PageTwo';
-import PageThree from './components/Pages/PageThree';
-import PageFour from './components/Pages/PageFour';
+import ShowCase from './components/Pages/ShowCase';
+import Hero from './components/Pages/Hero';
 
 
 class App extends Component {
@@ -16,10 +14,8 @@ class App extends Component {
             <div className="App">
                 <div className="pages-wrapper">
                     {/*<Navbar />*/}
-                    <PageOne/>
-                    <PageTwo/>
-                    <PageThree/>
-                    <PageFour />
+                    <Hero/>
+                    <ShowCase />
                 </div>
             </div>
 
