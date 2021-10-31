@@ -2,6 +2,7 @@ import React from 'react';
 import TsParticlesBackground from "../ParticlesJS/TsParticlesBackground";
 import ReactParticlesJSBackground from '../ParticlesJS/ReactParticlesJSBackground';
 import ScrollDown from '../Utility/ScrollDown';
+import Typewriting from '../Typewriting/Typewriting';
 
 
 const Hero = () => {
@@ -11,7 +12,10 @@ const Hero = () => {
             <TsParticlesBackground />
             {/*<ReactParticlesJSBackground />*/}
 
-            <h1 className="ts-h1"> Zoran G </h1>
+            <div className="hero-text">
+                {/*<h1 className="hero-h1"> Hello </h1>*/}
+                <Typewriting />
+            </div>
 
             <ScrollDown />
         </div>
