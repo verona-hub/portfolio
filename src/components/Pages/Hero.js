@@ -1,6 +1,6 @@
 import React from 'react';
 import TsParticlesBackground from "../ParticlesJS/TsParticlesBackground";
-import ReactParticlesJSBackground from '../ParticlesJS/ReactParticlesJSBackground';
+// import ReactParticlesJSBackground from '../ParticlesJS/ReactParticlesJSBackground';
 import ScrollDown from '../Utility/ScrollDown';
 import Typewriting from '../Typewriting/Typewriting';
 

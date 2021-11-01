@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Particles from "react-tsparticles";
 import ReactParticlesJSConfig from './ReactParticlesJSConfig';
 
@@ -6,7 +6,7 @@ import ReactParticlesJSConfig from './ReactParticlesJSConfig';
 const ReactParticlesJSBackground = () => {
     return (
             <Particles
-                params={ ReactParticlesJSConfig }
+                // params={ ReactParticlesJSConfig }
                 className="canvas"
             />
     );
