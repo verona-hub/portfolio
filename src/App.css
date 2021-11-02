@@ -41,6 +41,7 @@ html {
 .hero-text {
     align-items: center;
     display: flex;
+    flex-direction: column;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-weight: 300;
     left: 0;

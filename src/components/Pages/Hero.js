@@ -2,10 +2,12 @@ import React from 'react';
 import TsParticlesBackground from "../ParticlesJS/TsParticlesBackground";
 // import ReactParticlesJSBackground from '../ParticlesJS/ReactParticlesJSBackground';
 import ScrollDown from '../Utility/ScrollDown';
-import Typewriting from '../Typewriting/Typewriting';
+import TypewritingFunc from '../Typewriting/TypewritingFunc';
 
 
 const Hero = () => {
+
+    TypewritingFunc();
 
     return (
         <div className="Page Hero">
@@ -13,8 +15,8 @@ const Hero = () => {
             {/*<ReactParticlesJSBackground />*/}
 
             <div className="hero-text">
-                {/*<h1 className="hero-h1"> Hello </h1>*/}
-                <Typewriting />
+                <h1> Hello. </h1>
+                <h1 className="typewriting"> &nbsp; </h1>
             </div>
 
             <ScrollDown />

@@ -1,51 +1,38 @@
-import React from 'react';
+
+const headers = ['I am Zoran.', 'I am a junior web developer.'];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
 
 
 const TypewritingFunc = () => {
 
-    // let header = document.querySelector('.typewriting');
-    const texts = ['I am Zoran.', 'I am a junior web developer'];
-    let count = 0;
-    let index = 0;
-    let currentText = '';
-    let letter = '';
-    let finishedText = '';
+    let header = document.querySelector('.typewriting');
 
-    const type = () => {
-        // If count is equal the array length
-        if(count === texts.length) {
-            // Reset to zero
-            count = 0;
-        }
-        currentText = texts[count];
+    // If count reaches the array length
+    if(count === headers.length) {
+        // Reset to zero
+        count = 0;
+    }
+    currentText = headers[count];
 
-        // Increment one character at the time
-        letter = currentText.slice(0, ++index);
+    // Increment one character at the time
+    letter = currentText.slice(0, ++index);
 
-        // document.querySelector('.typewriting').textContent = letter;
-        finishedText = letter;
-
-        if(letter.length === currentText.length) {
-            count++;
-            index = 0;
-        }
-        setTimeout(type, 400);
-
-        return finishedText;
-
+    // DO NOT REMOVE IF STATEMENT!
+    // TypeError: can't access property "textContent", header is null
+    if(header) {
+        header.textContent = letter;
     }
 
-    // type();
+    if(letter.length === currentText.length) {
+        count++;
+        index = 0;
+    }
 
-    // window.onload = function(e){
-    //     console.log(e)
-    // }
-
-    return (
-        <h1 className="typewriting"> { type() }</h1>
-    );
+    setTimeout(TypewritingFunc, 500);
 }
-
 
 
 export default TypewritingFunc;
