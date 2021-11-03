@@ -16,7 +16,7 @@ const Hero = () => {
 
             <div className='hero-text'>
                 <h1> Hello.&nbsp;</h1>
-                {/*<h1 className='typewriting'> &nbsp; </h1>*/}
+                <h1 className='typewriting'> &nbsp; </h1>
             </div>
 
             <ScrollDown />
