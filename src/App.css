@@ -41,21 +41,21 @@ html {
 .hero-text {
     align-items: center;
     display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-weight: 300;
-    flex-wrap: wrap;
-    left: 20vw;
+    left: 0;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    /*right: 25%;*/
+    right: 0;
     text-align: center;
     user-select: none;
 }
 
 .typewriting {
+    margin-left: 20px;
     position: relative;
 }
 
@@ -148,28 +148,3 @@ html {
 .page-four {
     background: linear-gradient(to top, #070728, #0e0e15);
 }
-
-
-
-/*
-MOBILE
-*/
-
-@media (max-width: 1340px) {
-    .Hero {
-        font-size: 2rem;
-    }
-
-    .hero-text {
-        display: flex;
-        flex-direction: column;
-        left: 0;
-        right: 0;
-    }
-
-    .typewriting {
-        position: relative;
-        left: 0;
-    }
-}
-
