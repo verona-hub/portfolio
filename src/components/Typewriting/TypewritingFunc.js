@@ -1,5 +1,5 @@
 
-const headers = ['I am Zoran.', 'I am a junior web developer.'];
+const headerTexts = ['Welcome to my portfolio page.', 'I am Zoran.', 'I am a junior web developer.'];
 let count = 0;
 let index = 0;
 let currentText = '';
@@ -11,11 +11,11 @@ const TypewritingFunc = () => {
     let header = document.querySelector('.typewriting');
 
     // If count reaches the array length
-    if(count === headers.length) {
+    if(count === headerTexts.length) {
         // Reset to zero
         count = 0;
     }
-    currentText = headers[count];
+    currentText = headerTexts[count];
 
     // Increment one character at the time
     letter = currentText.slice(0, ++index);
@@ -31,7 +31,7 @@ const TypewritingFunc = () => {
         index = 0;
     }
 
-    setTimeout(TypewritingFunc, 500);
+    setTimeout(TypewritingFunc, 350);
 }
 
 
