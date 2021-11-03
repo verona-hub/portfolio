@@ -51,6 +51,12 @@ html {
 
 .Navbar a.active {
     background: #9e1aea;
+    transition: 500ms;
+}
+
+.Navbar a.active .number {
+    color: #9e1aea;
+    transition: 500ms;
 }
 
 .Navbar a.active .number {
@@ -193,6 +199,11 @@ html {
     height: 100vh;
     justify-content: center;
     scroll-snap-align: start;
+    transition: 1s;
+}
+
+.Page:target {
+
 }
 
 .Hero {

@@ -2,11 +2,26 @@ import React from 'react';
 
 
 const Navbar = () => {
+
+    setInterval(() => {
+        const currentPage = window.location.href;
+        const menuItem = document.querySelectorAll('a');
+        const newMenuItem = Array.from(menuItem);
+
+        newMenuItem.forEach(item => {
+            item.classList.remove('active');
+            if(item.href === currentPage) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+
     return (
         <div className='Navbar'>
             <ul>
                 <li>
-                    <a href="#page-1" className='active'>
+                    <a href="#page-1">
                         <span className='number'> 1 </span>
                     </a>
                 </li>
