@@ -31,7 +31,7 @@ const TypewritingFunc = () => {
         index = 0;
     }
 
-    setTimeout(TypewritingFunc, 350);
+    setTimeout(TypewritingFunc, 400);
 }
 
 
