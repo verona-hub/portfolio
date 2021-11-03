@@ -7,17 +7,87 @@
 html {
     color: white;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
+/*
++ Navbar
+*/
+
 .Navbar {
-    background: #13151e;
+    /*background-color: red;*/
+    bottom: 50px;
+    color: white;
+    font-size: 1.4rem;
+    position: fixed;
+    right: 50px;
+    top: auto;
+    /*width: 16px;*/
+    z-index: 1000;
+}
+
+.Navbar li {
+    display: block;
+    margin: 10px 0;
+    padding: 0;
+    height: auto;
+    position: relative;
+    width: auto;
+}
+
+.Navbar a {
+    background: #47576e;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.Navbar a,
+.Navbar a.active {
+    height: 56px;
+    width: 3px;
+}
+
+.Navbar a.active {
+    background: #9e1aea;
+}
+
+.Navbar a.active .number {
+    display: block;
+}
+
+.Navbar li,
+.Navbar span {
+    background: transparent;
+}
+
+.Navbar span {
+    /*background: #fff;*/
+    /*border: 0;*/
+    /*border-radius: 50%;*/
+    /*height: 4px;*/
+    /*left: 50%;*/
+    margin: -8px 0 0 -2px;
+    /*position: absolute;*/
+    top: 50%;
+    /*width: 4px;*/
+    z-index: 1;
+    /*transition: all 1s ease-in-out;*/
+}
+
+.Navbar span.number {
+    /*display: none;*/
+    clip: unset;
+    color: whitesmoke;
+    font-weight: 600;
+    height: auto;
+    left: -20px;
+    overflow: hidden;
     position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 100%;
+    visibility: visible;
+    /*white-space: nowrap;*/
+    width: auto;
 }
 
 
@@ -152,7 +222,7 @@ html {
 
 
 /*
-MOBILE
++ MOBILE
 */
 
 @media (max-width: 1340px) {
@@ -173,3 +243,8 @@ MOBILE
     }
 }
 
+@media (max-width: 640px) {
+    .Hero {
+        font-size: 1rem;
+    }
+}
