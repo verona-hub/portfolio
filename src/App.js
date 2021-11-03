@@ -2,8 +2,8 @@ import React, { Component }  from "react";
 
 // Components
 import Navbar from './components/Navbar';
-import ShowCase from './components/Pages/ShowCase';
-import Hero from './components/Pages/Hero';
+import Main from './components/Main';
+import Hero from './components/Hero';
 
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
                 <Navbar />
                 <div className="pages-wrapper">
                     <Hero/>
-                    <ShowCase />
+                    <Main />
                 </div>
             </div>
 

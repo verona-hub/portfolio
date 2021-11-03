@@ -1,7 +1,7 @@
 import React from 'react';
-import ParticlesJS from '../ParticlesJS/ParticlesJS';
-import ScrollDown from '../Utility/ScrollDown';
-import TypewritingFunc from '../Typewriting/TypewritingFunc';
+import ParticlesJS from './Utility/ParticlesJS/ParticlesJS';
+import ScrollDown from './Utility/ScrollDown';
+import TypewritingFunc from './Utility/Typewriting/TypewritingFunc';
 
 
 const Hero = () => {
