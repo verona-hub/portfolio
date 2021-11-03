@@ -1,10 +1,10 @@
 // import React from 'react';
 
 
-const TsParticlesConfig = {
+const ParticlesJSConfig = {
     "particles": {
         "number": {
-            "value": 60,
+            "value": 100,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -107,4 +107,4 @@ const TsParticlesConfig = {
     "retina_detect": true
 };
 
-export default TsParticlesConfig;
+export default ParticlesJSConfig;

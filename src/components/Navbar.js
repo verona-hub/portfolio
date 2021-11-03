@@ -6,22 +6,22 @@ const Navbar = () => {
         <div className='Navbar'>
             <ul>
                 <li>
-                    <a href="#01" className='active'>
+                    <a href="#page-1" className='active'>
                         <span className='number'> 1 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#02">
+                    <a href="#page-2">
                         <span className='number'> 2 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#03">
+                    <a href="#page-3">
                         <span className='number'> 3 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#04">
+                    <a href="#page-4">
                         <span className='number'> 4 </span>
                     </a>
                 </li>
@@ -29,5 +29,6 @@ const Navbar = () => {
         </div>
     );
 };
+
 
 export default Navbar;
