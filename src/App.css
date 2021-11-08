@@ -10,6 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 /*
 + Navbar
 */
@@ -98,7 +99,7 @@ html {
 
 
 /*
-+ Hero
++ PageOne
 */
 
 .ParticlesJS {
@@ -202,10 +203,6 @@ html {
     transition: 1s;
 }
 
-.Page:target {
-
-}
-
 .Hero {
     color: white;
     font-size: 2.4rem;
@@ -245,7 +242,7 @@ html {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 840px) {
     .Hero {
         font-size: 1rem;
     }

@@ -1,5 +1,5 @@
 
-const headerTexts = ['Welcome to my portfolio page.', 'I am Zoran.', 'I am a junior web developer.'];
+const headerTexts = ['Welcome to my portfolio.', 'I am Zoran.', 'I am a junior web developer.'];
 let count = 0;
 let index = 0;
 let currentText = '';

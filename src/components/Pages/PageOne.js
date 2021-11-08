@@ -1,16 +1,16 @@
 import React from 'react';
-import ParticlesJS from './Utility/ParticlesJS/ParticlesJS';
-import ScrollDown from './Utility/ScrollDown';
-import TypewritingFunc from './Utility/Typewriting/TypewritingFunc';
+import ParticlesJS from '../Utility/ParticlesJS/ParticlesJS';
+import ScrollDown from '../Utility/ScrollDown';
+import TypewritingFunc from '../Utility/Typewriting/TypewritingFunc';
 
 
-const Hero = () => {
+const PageOne = () => {
 
     // Activates the typewriting effect
     TypewritingFunc();
 
     return (
-        <div id='page-1' className='Page Hero'>
+        <div id='page-one' className='Page Hero'>
 
             <ParticlesJS />
 
@@ -25,4 +25,4 @@ const Hero = () => {
 };
 
 
-export default Hero;
+export default PageOne;

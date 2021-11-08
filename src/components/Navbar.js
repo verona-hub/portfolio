@@ -1,42 +1,32 @@
 import React from 'react';
+import activeScrollbar from './Utility/ActiveScrollbar';
 
 
 const Navbar = () => {
 
-    setInterval(() => {
-        const currentPage = window.location.href;
-        const menuItem = document.querySelectorAll('a');
-        const newMenuItem = Array.from(menuItem);
-
-        newMenuItem.forEach(item => {
-            item.classList.remove('active');
-            if(item.href === currentPage) {
-                item.classList.add('active');
-            }
-        });
-    });
-
+    // Function activator
+    activeScrollbar();
 
     return (
         <div className='Navbar'>
             <ul>
                 <li>
-                    <a href="#page-1">
+                    <a href="#page-one">
                         <span className='number'> 1 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-2">
+                    <a href="#page-two">
                         <span className='number'> 2 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-3">
+                    <a href="#page-three">
                         <span className='number'> 3 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-4">
+                    <a href="#page-four">
                         <span className='number'> 4 </span>
                     </a>
                 </li>
