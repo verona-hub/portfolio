@@ -2,7 +2,7 @@ import React, { Component }  from "react";
 import ScrollableSection, { ScrollableLink } from 'react-update-url-on-scroll';
 
 // Components
-import Navbar from './components/Navbar';
+import Navbar from './components/Utility/Navbar/Navbar';
 import PageOne from './components/Pages/PageOne';
 import PageTwo from "./components/Pages/PageTwo";
 import PageThree from "./components/Pages/PageThree";

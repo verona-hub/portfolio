@@ -12,10 +12,11 @@ const ScrollDown = () => {
             });
     }
 
-
     return (
-        <div className="ScrollDown" >
-            <img onClick={ scrollToPageTwo } src={ arrow } alt="scroll down arrow" />
+        <div className="ScrollDown">
+            <div className='image-wrapper' onClick={ scrollToPageTwo }>
+                <img src={ arrow } alt="scroll down arrow"/>
+            </div>
         </div>
     );
 };

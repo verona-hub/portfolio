@@ -16,14 +16,12 @@ html {
 */
 
 .Navbar {
-    /*background-color: red;*/
     bottom: 50px;
     color: white;
     font-size: 1.4rem;
     position: fixed;
     right: 50px;
     top: auto;
-    /*width: 16px;*/
     z-index: 1000;
 }
 
@@ -70,21 +68,12 @@ html {
 }
 
 .Navbar span {
-    /*background: #fff;*/
-    /*border: 0;*/
-    /*border-radius: 50%;*/
-    /*height: 4px;*/
-    /*left: 50%;*/
     margin: -8px 0 0 -2px;
-    /*position: absolute;*/
     top: 50%;
-    /*width: 4px;*/
     z-index: 1;
-    /*transition: all 1s ease-in-out;*/
 }
 
 .Navbar span.number {
-    /*display: none;*/
     clip: unset;
     color: whitesmoke;
     font-weight: 600;
@@ -93,7 +82,6 @@ html {
     overflow: hidden;
     position: absolute;
     visibility: visible;
-    /*white-space: nowrap;*/
     width: auto;
 }
 
@@ -109,7 +97,6 @@ html {
 .hero-text {
     align-items: center;
     display: flex;
-    /*flex-direction: column;*/
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-weight: 300;
     flex-wrap: wrap;
@@ -118,7 +105,6 @@ html {
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    /*right: 25%;*/
     text-align: center;
     user-select: none;
 }
@@ -149,8 +135,23 @@ html {
 */
 
 .ScrollDown {
-    cursor: pointer;
     position: relative;
+    width: 100%;
+}
+
+.ScrollDown,
+.ScrollDown .image-wrapper {
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.ScrollDown .image-wrapper {
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
 }
 
 .ScrollDown img {
@@ -245,5 +246,10 @@ html {
 @media (max-width: 840px) {
     .Hero {
         font-size: 1rem;
+    }
+    .typewriting {
+        left: 25%;
+        position: absolute;
+        top: 100%;
     }
 }

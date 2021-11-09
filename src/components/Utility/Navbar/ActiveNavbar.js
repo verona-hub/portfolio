@@ -1,12 +1,12 @@
 
-const activeScrollbar = () => {
+const activeNavbar = () => {
 
     setInterval(() => {
         const pathInView = window.location.pathname;
         const allLinks = document.querySelectorAll('a');
         const menuItem = Array.from(allLinks);
 
-        menuItem.forEach(item => {
+        menuItem.forEach( item => {
 
             // Functions that toggle the active class
             const lightON = () => item.classList.add('active');
@@ -33,4 +33,4 @@ const activeScrollbar = () => {
 }
 
 
-export default activeScrollbar;
+export default activeNavbar;

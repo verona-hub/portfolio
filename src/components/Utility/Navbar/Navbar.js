@@ -1,11 +1,11 @@
 import React from 'react';
-import activeScrollbar from './Utility/ActiveScrollbar';
+import activeNavbar from './ActiveNavbar';
 
 
 const Navbar = () => {
 
     // Function activator
-    activeScrollbar();
+    activeNavbar();
 
     return (
         <div className='Navbar'>

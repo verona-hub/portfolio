@@ -6,9 +6,6 @@ import TypewritingFunc from '../Utility/Typewriting/TypewritingFunc';
 
 const PageOne = () => {
 
-    // Activates the typewriting effect
-    TypewritingFunc();
-
     return (
         <div id='page-one' className='Page Hero'>
 
@@ -16,7 +13,7 @@ const PageOne = () => {
 
             <div className='hero-text'>
                 <h1> Hello.&nbsp;</h1>
-                <h1 className='typewriting'> &nbsp; </h1>
+                <h1 className='typewriting'> &nbsp; { TypewritingFunc() } </h1>
             </div>
 
             <ScrollDown />
