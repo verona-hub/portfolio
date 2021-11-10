@@ -2,12 +2,49 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --scrollbar: #5CECBF;
+    --scrollbar_hover: #24a47c;
+    --purple: #9e1aea;
+    --purple_light: #ac53df;
+    --page_odd: linear-gradient(to top, #0e0e15, #070728);
+    --page_even: linear-gradient(to top, #070728, #0e0e15);
+    --whitesmoke: #F5F5F5;
 }
 
 html {
-    color: white;
+    color: var(--whitesmoke);
     overflow: hidden;
-    scroll-behavior: smooth;
+}
+
+
+/*
++ Scrollbar
+*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    /*background-color: var(--whitesmoke);*/
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background: linear-gradient(transparent, var(--scrollbar));
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, var(--scrollbar_hover));
 }
 
 
@@ -49,13 +86,15 @@ html {
 }
 
 .Navbar a.active {
-    background: #9e1aea;
-    transition: 500ms;
+    background: var(--purple);
+    background: var(--scrollbar);
+    /*transition: 500ms;*/
 }
 
 .Navbar a.active .number {
-    color: #9e1aea;
-    transition: 500ms;
+    color: var(--purple);
+    color: var(--scrollbar);
+    /*transition: 500ms;*/
 }
 
 .Navbar a.active .number {
@@ -76,6 +115,7 @@ html {
 .Navbar span.number {
     clip: unset;
     color: whitesmoke;
+    color: #47576e;
     font-weight: 600;
     height: auto;
     left: -20px;
@@ -211,12 +251,12 @@ html {
 
 .Hero,
 .page-three {
-    background: linear-gradient(to top, #0e0e15, #070728);
+    background: var(--page_odd);
 }
 
 .page-two,
 .page-four {
-    background: linear-gradient(to top, #070728, #0e0e15);
+    background: var(--page_even);
 }
 
 

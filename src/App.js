@@ -1,5 +1,5 @@
 import React, { Component }  from "react";
-import ScrollableSection, { ScrollableLink } from 'react-update-url-on-scroll';
+import ScrollableSection  from 'react-update-url-on-scroll';
 
 // Components
 import Navbar from './components/Utility/Navbar/Navbar';
@@ -18,7 +18,7 @@ class App extends Component {
             <div className='App'>
                 <Navbar/>
                 <div className="pages-wrapper">
-                    <ScrollableSection name={'/'}>
+                    <ScrollableSection name={'/'} className='test'>
                         <div>
                             <PageOne/>
                         </div>
