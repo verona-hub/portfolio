@@ -4,7 +4,7 @@ import activeNavbar from './ActiveNavbar';
 
 const Navbar = () => {
 
-    // Function activator
+    // Active color on navbar
     activeNavbar();
 
     return (

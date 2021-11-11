@@ -11,7 +11,7 @@ const ParticlesJSConfig = {
             }
         },
         "color": {
-            "value": "#ffffff"
+            "value": "#9e1aea"
         },
         "shape": {
             "type": "circle",
@@ -24,7 +24,7 @@ const ParticlesJSConfig = {
             },
         },
         "opacity": {
-            "value": 0.6,
+            "value": 1,
             "random": false,
             "anim": {
                 "enable": true,
@@ -45,8 +45,8 @@ const ParticlesJSConfig = {
         },
         "line_linked": {
             "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
+            "distance": 140,
+            "color": "#c0c6cf",
             "opacity": 0.4,
             "width": 1
         },

@@ -12,7 +12,7 @@ const PageOne = () => {
             <ParticlesJS />
 
             <div className='hero-text'>
-                <h1> Hello.&nbsp;</h1>
+                <h1 className='hello'> Hello.&nbsp;</h1>
                 <h1 className='typewriting'> &nbsp; { TypewritingFunc() } </h1>
             </div>
 
