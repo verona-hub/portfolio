@@ -84,7 +84,7 @@ html {
 .Navbar a,
 .Navbar a.active {
     height: 56px;
-    width: 3px;
+    width: 5px;
 }
 
 .Navbar a.active {
@@ -105,14 +105,16 @@ html {
 }
 
 .Navbar span {
-    margin: -8px 0 0 -2px;
+    margin: -24px 0 0 -10px;
+    padding: 13px 10px;
     top: 50%;
     z-index: 1;
 }
 
 .Navbar span.number {
     clip: unset;
-    color: var(--grey);
+    color: transparent;
+    display: none;
     font-weight: 600;
     height: auto;
     left: -20px;
