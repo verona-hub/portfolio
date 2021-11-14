@@ -247,6 +247,7 @@ html {
     height: 100vh;
     justify-content: center;
     scroll-snap-align: start;
+    text-align: center;
     transition: 1s;
 }
 
@@ -265,6 +266,54 @@ html {
     background: var(--page_even);
 }
 
+/*
++ ShowCase
+*/
+
+.ShowCase h1 {
+    margin: 20px;
+}
+
+.ShowCase .box {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    justify-content: center;
+    position: relative;
+    width: 70vw;
+}
+
+.ShowCase .box-item {
+    background-color: teal;
+    color: var(--whitesmoke);
+    height: 100%;
+    padding: 20px;
+}
+
+.ShowCaseImage {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /*flex: 1 1 auto;*/
+}
+
+.ShowCaseImage a {
+    height: 100%;
+}
+
+.ShowCaseImage img {
+    background-color: teal;
+    /*border: 5px solid var(--whitesmoke);*/
+    height: 100%;
+    width: 100%;
+}
+
+.ShowCaseText {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 
 /*
@@ -286,6 +335,10 @@ html {
     .typewriting {
         position: relative;
         left: 0;
+    }
+
+    .ShowCase .box {
+        flex-direction: column;
     }
 }
 

@@ -10,7 +10,7 @@ const activeNavbar = () => {
 
     setInterval(() => {
         const pathInView = window.location.pathname;
-        const allLinks = document.querySelectorAll('a');
+        const allLinks = document.querySelectorAll('.Navbar a');
         const menuItem = Array.from(allLinks);
 
         menuItem.forEach( item => {

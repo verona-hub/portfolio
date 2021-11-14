@@ -18,7 +18,7 @@ class App extends Component {
             <div className='App'>
                 <Navbar/>
                 <div className="pages-wrapper">
-                    <ScrollableSection name={'/'} className='test'>
+                    <ScrollableSection name={'/'}>
                         <div>
                             <PageOne/>
                         </div>

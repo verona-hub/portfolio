@@ -1,12 +1,22 @@
 import React from 'react';
+import ShowCase from './ShowCase/ShowCase';
+import image from '../../img/batman-screenshot.jpg';
 
 
 const PageThree = () => {
     return (
         <div id='page-three' className='Page page-three'>
-            <h1> Page 3 </h1>
+            <ShowCase
+                title='Page 3 - Batman Fansite'
+                image={ image }
+                projectLink='https://bat-man.vercel.app/'
+                projectName='Batman Fansite'
+                projectInfo='This app was made with Html and CSS.'
+                githubLink='https://github.com/verona-hub/batman'
+            />
         </div>
     );
 };
+
 
 export default PageThree;
