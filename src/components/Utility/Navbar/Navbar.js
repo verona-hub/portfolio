@@ -40,6 +40,11 @@ const Navbar = () => {
                         <span className='number'> 6 </span>
                     </a>
                 </li>
+                <li>
+                    <a href="#page-seven-ColorGenerator">
+                        <span className='number'> 7 </span>
+                    </a>
+                </li>
             </ul>
         </div>
     );

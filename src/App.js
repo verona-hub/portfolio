@@ -9,6 +9,7 @@ import PageThree from "./components/Pages/PageThree";
 import PageFour from "./components/Pages/PageFour";
 import PageFive from './components/Pages/PageFive';
 import PageSix from './components/Pages/PageSix';
+import PageSeven from './components/Pages/PageSeven';
 
 
 class App extends Component {
@@ -48,6 +49,11 @@ class App extends Component {
                     <ScrollableSection name='page-six-QuoteGenerator'>
                         <div>
                             <PageSix/>
+                        </div>
+                    </ScrollableSection>
+                    <ScrollableSection name='page-seven-ColorGenerator'>
+                        <div>
+                            <PageSeven/>
                         </div>
                     </ScrollableSection>
                 </div>

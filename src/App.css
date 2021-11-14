@@ -258,12 +258,14 @@ html {
 
 .Hero,
 .page-three,
-.page-five {
+.page-five,
+.page-seven {
     background: var(--page_odd);
 }
 
 .page-two,
-.page-four {
+.page-four,
+.page-six {
     background: var(--page_even);
 }
 
@@ -272,7 +274,7 @@ html {
 */
 
 .ShowCase h1 {
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .ShowCase .box {
@@ -295,7 +297,6 @@ html {
     align-items: center;
     display: flex;
     justify-content: center;
-    /*flex: 1 1 auto;*/
 }
 
 .ShowCaseImage a {
@@ -304,7 +305,6 @@ html {
 
 .ShowCaseImage img {
     background-color: teal;
-    /*border: 5px solid var(--whitesmoke);*/
     height: 100%;
     width: 100%;
 }
@@ -351,5 +351,9 @@ html {
         left: 25%;
         position: absolute;
         top: 100%;
+    }
+
+    .ShowCase h1 {
+        font-size: 1.4rem;
     }
 }
