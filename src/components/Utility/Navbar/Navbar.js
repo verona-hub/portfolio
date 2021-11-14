@@ -16,23 +16,28 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="#page-two">
+                    <a href="#page-two-WeatherApp">
                         <span className='number'> 2 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-three">
+                    <a href="#page-three-Batman">
                         <span className='number'> 3 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-four">
+                    <a href="#page-four-TodoList">
                         <span className='number'> 4 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-five">
+                    <a href="#page-five-ScreenResolution">
                         <span className='number'> 5 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page-six-QuoteGenerator">
+                        <span className='number'> 6 </span>
                     </a>
                 </li>
             </ul>

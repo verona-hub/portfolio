@@ -5,7 +5,7 @@ import image from '../../img/weather-app-screenshot.png';
 
 const PageTwo = () => {
     return (
-        <div id='page-two' className="Page page-two">
+        <div id='page-two-WeatherApp' className="Page page-two">
             <ShowCase
                 title='Page 2 - Weather App'
                 image={ image }

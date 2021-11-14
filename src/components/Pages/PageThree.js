@@ -5,7 +5,7 @@ import image from '../../img/batman-screenshot.jpg';
 
 const PageThree = () => {
     return (
-        <div id='page-three' className='Page page-three'>
+        <div id='page-three-Batman' className='Page page-three'>
             <ShowCase
                 title='Page 3 - Batman Fansite'
                 image={ image }

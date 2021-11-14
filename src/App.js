@@ -8,6 +8,7 @@ import PageTwo from "./components/Pages/PageTwo";
 import PageThree from "./components/Pages/PageThree";
 import PageFour from "./components/Pages/PageFour";
 import PageFive from './components/Pages/PageFive';
+import PageSix from './components/Pages/PageSix';
 
 
 class App extends Component {
@@ -19,29 +20,34 @@ class App extends Component {
             <div className='App'>
                 <Navbar/>
                 <div className="pages-wrapper">
-                    <ScrollableSection name={'/'}>
+                    <ScrollableSection name='/'>
                         <div>
                             <PageOne/>
                         </div>
                     </ScrollableSection>
-                    <ScrollableSection name={'page-two'}>
+                    <ScrollableSection name='page-two-WeatherApp'>
                         <div>
                             <PageTwo/>
                         </div>
                     </ScrollableSection>
-                    <ScrollableSection name={'page-three'}>
+                    <ScrollableSection name='page-three-Batman'>
                         <div>
                             <PageThree/>
                         </div>
                     </ScrollableSection>
-                    <ScrollableSection name={'page-four'}>
+                    <ScrollableSection name='page-four-TodoList'>
                         <div>
                             <PageFour/>
                         </div>
                     </ScrollableSection>
-                    <ScrollableSection name={'page-five'}>
+                    <ScrollableSection name='page-five-ScreenResolution'>
                         <div>
                             <PageFive/>
+                        </div>
+                    </ScrollableSection>
+                    <ScrollableSection name='page-six-QuoteGenerator'>
+                        <div>
+                            <PageSix/>
                         </div>
                     </ScrollableSection>
                 </div>

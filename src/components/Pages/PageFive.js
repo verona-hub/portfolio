@@ -5,7 +5,7 @@ import image from "../../img/screen-resolution-screenshot.png";
 
 const PageFive = () => {
     return (
-        <div id='page-five' className='Page page-five'>
+        <div id='page-five-ScreenResolution' className='Page page-five'>
             <ShowCase
                 title='Page 5 - Screen Resolution'
                 image={ image }
