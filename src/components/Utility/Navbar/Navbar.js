@@ -30,6 +30,11 @@ const Navbar = () => {
                         <span className='number'> 4 </span>
                     </a>
                 </li>
+                <li>
+                    <a href="#page-five">
+                        <span className='number'> 5 </span>
+                    </a>
+                </li>
             </ul>
         </div>
     );

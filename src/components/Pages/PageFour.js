@@ -10,8 +10,8 @@ const PageFour = () => {
                 title='Page 4 - Todo List'
                 image={ image }
                 projectLink='https://simple-todo-list.vercel.app/'
-                projectName='Weather App'
-                projectInfo='This app was made with ReactJS.'
+                projectName='Todo List'
+                projectInfo='This website was made with Html, CSS, and jQuery.'
                 githubLink='https://github.com/verona-hub/to-do-list'
             />
         </div>

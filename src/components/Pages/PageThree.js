@@ -11,7 +11,7 @@ const PageThree = () => {
                 image={ image }
                 projectLink='https://bat-man.vercel.app/'
                 projectName='Batman Fansite'
-                projectInfo='This app was made with Html and CSS.'
+                projectInfo='This website was made with Html and CSS.'
                 githubLink='https://github.com/verona-hub/batman'
             />
         </div>

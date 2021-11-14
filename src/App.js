@@ -7,6 +7,7 @@ import PageOne from './components/Pages/PageOne';
 import PageTwo from "./components/Pages/PageTwo";
 import PageThree from "./components/Pages/PageThree";
 import PageFour from "./components/Pages/PageFour";
+import PageFive from './components/Pages/PageFive';
 
 
 class App extends Component {
@@ -36,6 +37,11 @@ class App extends Component {
                     <ScrollableSection name={'page-four'}>
                         <div>
                             <PageFour/>
+                        </div>
+                    </ScrollableSection>
+                    <ScrollableSection name={'page-five'}>
+                        <div>
+                            <PageFive/>
                         </div>
                     </ScrollableSection>
                 </div>

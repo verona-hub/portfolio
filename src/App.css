@@ -257,7 +257,8 @@ html {
 }
 
 .Hero,
-.page-three {
+.page-three,
+.page-five {
     background: var(--page_odd);
 }
 
