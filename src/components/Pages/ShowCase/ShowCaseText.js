@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ShowCaseText = ({ projectName, projectInfo, githubLink }) => {
     return (
         <div className='box-item ShowCaseText'>
@@ -13,5 +14,6 @@ const ShowCaseText = ({ projectName, projectInfo, githubLink }) => {
         </div>
     );
 };
+
 
 export default ShowCaseText;
