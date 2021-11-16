@@ -4,14 +4,17 @@ import image from "../../img/quote-generator-screenshot.png";
 
 
 const PageSix = () => {
+
+    const info = 'This website was made with Html, CSS, and jQuery. A random quote is displayed on button click or spacebar/enter keypress. ' +
+                  'On each shuffle, the background image is also changed.';
+
     return (
         <div id='page-six-QuoteGenerator' className='Page page-six'>
             <ShowCase
-                title='Page 6 - Quote Generator'
+                title='Quote Generator'
                 image={ image }
                 projectLink='https://quote-generator.verona.vercel.app/'
-                projectName='Quote Generator'
-                projectInfo='This website was made with Html, CSS, and jQuery.'
+                projectInfo={ info }
                 githubLink='https://github.com/verona-hub/quote-generator'
             />
         </div>

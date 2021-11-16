@@ -1,16 +1,15 @@
 import React from 'react';
 
 
-const ShowCaseText = ({ projectName, projectInfo, githubLink }) => {
+const ShowCaseText = ({ projectInfo, githubLink }) => {
     return (
         <div className='box-item ShowCaseText'>
-            <h2> { projectName } </h2>
-            <h3> { projectInfo } </h3>
-            <h3> The code on &nbsp;
-                <a href={ githubLink } target='_blank' rel='noopener noreferrer' title='Github project'>
-                    Github
+            <p> { projectInfo } </p>
+            <p> The source code on &nbsp;
+                <a href={ githubLink } target='_blank' rel='noopener noreferrer' title='Github repository'>
+                    Github Repository.
                 </a>
-            </h3>
+            </p>
         </div>
     );
 };

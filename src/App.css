@@ -302,7 +302,6 @@ html {
 }
 
 .ShowCaseText {
-    background-color: lightpink;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -360,7 +359,7 @@ html {
     }
 
     .ShowCase .box {
-        width: 85vw;
+        width: 80vw;
     }
 
     .ShowCase h1 {
@@ -374,7 +373,7 @@ html {
 
 @media (max-width: 640px) {
     .Navbar {
-        right: 20px;
+        right: 5vw;
     }
 }
 

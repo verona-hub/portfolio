@@ -4,14 +4,18 @@ import image from "../../img/color-generator-screenshot.png";
 
 
 const PageSeven = () => {
+
+    const info = 'This website was made with Html, CSS, and Javascript. ' +
+                  'It generates a random color, displays the hex and rgb values, and changes the background color accordingly. ' +
+                  'If clicked on the hex or rgb box, the value will be copied to the clipboard.';
+
     return (
         <div id='page-seven-ColorGenerator' className='Page page-seven'>
             <ShowCase
-                title='Page 7 - Random Color Generator'
+                title='Random Color Generator'
                 image={ image }
                 projectLink='https://random-color-generators.vercel.app/'
-                projectName='Random Color Generator'
-                projectInfo='This website was made with Html, CSS, and Javascript.'
+                projectInfo={ info }
                 githubLink='https://github.com/verona-hub/random-color-generator'
             />
         </div>
