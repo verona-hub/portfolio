@@ -5,7 +5,8 @@ import image from '../../img/batman-screenshot.jpg';
 
 const PageThree = () => {
 
-    const info = 'This website was made with Html and CSS. A landing page with parallax and some hover effects.';
+    const info = 'This website was made with Html and CSS.';
+    const info2 ='A landing page with parallax and some hover effects.';
 
     return (
         <div id='page-three-Batman' className='Page page-three'>
@@ -14,6 +15,7 @@ const PageThree = () => {
                 image={ image }
                 projectLink='https://bat-man.vercel.app/'
                 projectInfo={ info }
+                projectInfo2={ info2 }
                 githubLink='https://github.com/verona-hub/batman'
             />
         </div>

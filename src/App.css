@@ -19,7 +19,7 @@
 }
 
 html {
-    color: var(--whitesmoke);
+    color: var(--dark_night);
     overflow: hidden;
 }
 
@@ -273,40 +273,53 @@ html {
 + ShowCase
 */
 
+.ShowCase {
+    background-color: var(--whitesmoke);
+    border-radius: 4px;
+    width: 75vw;
+}
+
 .ShowCase h1 {
-    margin: 20px 0;
+    margin: 50px 20px;
 }
 
-.ShowCase .box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    width: 70vw;
-}
-
-.ShowCase .box-item {
-    margin: 20px;
-}
-
-.ShowCaseImage {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.ShowCaseImage img {
-    height: 50vh;
-    width: 40vw;
-}
-
-.ShowCaseText {
-    align-items: center;
+.ShowCase,
+.ShowCase .box,
+.ShowCaseImage,
+.ShowCaseText,
+.ShowCaseText-content-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 30%;
+    text-align: center;
+}
+
+.ShowCase .box {
+    align-items: normal;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    margin-bottom: 80px;
+
+}
+
+.ShowCaseImage {
+    flex-basis: 45%;
+}
+
+.ShowCaseImage img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.ShowCaseText {
+    flex-basis: 40%;
+}
+
+.ShowCaseText-content-wrapper {
+    /*background-color: lightblue;*/
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -339,16 +352,32 @@ html {
         left: 0;
     }
 
+    .ShowCase {
+        width: 70vw;
+    }
+
+
     .ShowCase .box {
+        align-items: center;
         flex-direction: column;
+        justify-content: center;
+    }
+
+    .ShowCase .box-item {
+        width: 80%;
     }
 
     .ShowCaseImage img {
         width: 100%;
     }
+
 }
 
-@media (max-width: 840px) {
+@media (max-width: 940px) {
+    .Navbar {
+        right: 4vw;
+    }
+
     .Hero {
         font-size: 1rem;
     }
@@ -356,10 +385,6 @@ html {
         left: 25%;
         position: absolute;
         top: 100%;
-    }
-
-    .ShowCase .box {
-        width: 80vw;
     }
 
     .ShowCase h1 {
@@ -373,6 +398,7 @@ html {
 
 @media (max-width: 640px) {
     .Navbar {
+        font-size: 1rem;
         right: 5vw;
     }
 }

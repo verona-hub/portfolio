@@ -3,7 +3,7 @@ import ShowCaseImage from './ShowCaseImage';
 import ShowCaseText from './ShowCaseText';
 
 
-const ShowCase = ({ title, image, projectLink, projectInfo, githubLink }) => {
+const ShowCase = ({ title, image, projectLink, projectInfo, projectInfo2, githubLink }) => {
     return (
         <div className='ShowCase'>
 
@@ -18,6 +18,7 @@ const ShowCase = ({ title, image, projectLink, projectInfo, githubLink }) => {
 
                 <ShowCaseText
                     projectInfo={ projectInfo }
+                    projectInfo2={ projectInfo2 }
                     githubLink={ githubLink }
                 />
             </div>
