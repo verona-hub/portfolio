@@ -9,8 +9,8 @@
     --dark_purple: #070728;
     --dark_night: #0e0e15;
     --grey: #47576e;
-    --purple: #9e1aea;
-    --purple_light: #ac53df;
+    --link: #ffb6c1;
+    --link_visited: #008080;
     --page_odd: linear-gradient(to top, var(--dark_night), var(--dark_purple));
     --page_even: linear-gradient(to top, var(--dark_purple), var(--dark_night));
     --scrollbar: #5CECBF;
@@ -19,8 +19,46 @@
 }
 
 html {
-    color: var(--dark_night);
+    color: var(--whitesmoke);
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     overflow: hidden;
+}
+
+.Page h1 {
+    color: var(--scrollbar);
+    font-size: 2.6rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    word-spacing: 0.4rem;
+}
+
+.Hero h1 {
+    color: var(--whitesmoke);
+    font-size: 3.4rem;
+    font-weight: 300;
+    text-transform: none;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--link_visited);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--scrollbar);
 }
 
 
@@ -143,8 +181,6 @@ html {
 .hero-text {
     align-items: center;
     display: flex;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-weight: 300;
     flex-wrap: wrap;
     left: 20vw;
     justify-content: center;
@@ -240,7 +276,8 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-.Page {
+.Page,
+.Hero {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -251,22 +288,21 @@ html {
     transition: 1s;
 }
 
-.Hero {
-    color: var(--whitesmoke);
-    font-size: 2.4rem;
-}
 
 .Hero,
 .page-three,
 .page-five,
 .page-seven {
     background: var(--page_odd);
+    /*background: #1d1f21;*/
 }
 
 .page-two,
 .page-four,
 .page-six {
     background: var(--page_even);
+    /*background: #1d1f21;*/
+
 }
 
 /*
@@ -274,13 +310,11 @@ html {
 */
 
 .ShowCase {
-    background-color: var(--whitesmoke);
-    border-radius: 4px;
     width: 75vw;
 }
 
 .ShowCase h1 {
-    margin: 50px 20px;
+    margin-bottom: 80px;
 }
 
 .ShowCase,
@@ -299,8 +333,6 @@ html {
     flex-direction: row;
     position: relative;
     justify-content: space-around;
-    margin-bottom: 80px;
-
 }
 
 .ShowCaseImage {

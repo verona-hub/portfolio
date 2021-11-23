@@ -9,7 +9,7 @@ const ShowCaseText = ({ projectInfo, projectInfo2, githubLink }) => {
                 <p> { projectInfo2 } </p>
                 <p> The source code on &nbsp;
                     <a href={ githubLink } target='_blank' rel='noopener noreferrer' title='Github repository'>
-                        Github Repository.
+                        Github Repository
                     </a>
                 </p>
             </div>

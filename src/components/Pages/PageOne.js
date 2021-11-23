@@ -7,13 +7,13 @@ import TypewritingFunc from '../Utility/Typewriting/TypewritingFunc';
 const PageOne = () => {
 
     return (
-        <div id='page-one' className='Page Hero'>
+        <div id='page-one' className='Hero'>
 
             <ParticlesJS />
 
             <div className='hero-text'>
-                <h1 className='hello'> Hello.&nbsp;</h1>
-                <h1 className='typewriting'> &nbsp; { TypewritingFunc() } </h1>
+                <h1> Hello.&nbsp;</h1>
+                {/*<h1 className='typewriting'> &nbsp; { TypewritingFunc() } </h1>*/}
             </div>
 
             <ScrollDown />
