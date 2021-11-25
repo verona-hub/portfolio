@@ -13,7 +13,7 @@ const PageOne = () => {
 
             <div className='hero-text'>
                 <h1> Hello.&nbsp;</h1>
-                {/*<h1 className='typewriting'> &nbsp; { TypewritingFunc() } </h1>*/}
+                <h1 className='typewriting'> &nbsp; { TypewritingFunc() } </h1>
             </div>
 
             <ScrollDown />
