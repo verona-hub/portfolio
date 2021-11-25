@@ -9,8 +9,8 @@
     --dark_purple: #070728;
     --dark_night: #0e0e15;
     --grey: #47576e;
-    --link: #ffb6c1;
-    --link_visited: #008080;
+    --link_visited: #ffb6c1;
+    --link_active: #008080;
     --page_odd: linear-gradient(to top, var(--dark_night), var(--dark_purple));
     --page_even: linear-gradient(to top, var(--dark_purple), var(--dark_night));
     --scrollbar: #5CECBF;
@@ -26,10 +26,11 @@ html {
 
 .Page h1 {
     color: var(--scrollbar);
-    font-size: 2.6rem;
-    letter-spacing: 0.3rem;
+    font-family: 'Overlock', cursive;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
-    word-spacing: 0.4rem;
+    word-spacing: 0.2rem;
 }
 
 .Hero h1 {
@@ -44,7 +45,7 @@ p {
 }
 
 a {
-    color: var(--link);
+    color: var(--scrollbar);
     text-decoration: none;
 }
 
@@ -58,7 +59,7 @@ a:hover {
 }
 
 a:active {
-    color: var(--scrollbar);
+    color: var(--link_active);
 }
 
 
