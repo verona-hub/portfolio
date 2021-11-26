@@ -1,16 +1,9 @@
 import React, { Component }  from "react";
-import ScrollableSection  from 'react-update-url-on-scroll';
+
 
 // Components
 import Navbar from './components/Utility/Navbar/Navbar';
-import PageOne from './components/Pages/PageOne';
-import PageTwo from "./components/Pages/PageTwo";
-import PageThree from "./components/Pages/PageThree";
-import PageFour from "./components/Pages/PageFour";
-import PageFive from './components/Pages/PageFive';
-import PageSix from './components/Pages/PageSix';
-import PageSeven from './components/Pages/PageSeven';
-
+import Main from './components/Pages/Main';
 
 class App extends Component {
 
@@ -20,43 +13,7 @@ class App extends Component {
 
             <div className='App'>
                 <Navbar/>
-                <div className="pages-wrapper">
-                    <ScrollableSection name='/'>
-                        <div>
-                            <PageOne/>
-                        </div>
-                    </ScrollableSection>
-                    <ScrollableSection name='page-two-WeatherApp'>
-                        <div>
-                            <PageTwo/>
-                        </div>
-                    </ScrollableSection>
-                    <ScrollableSection name='page-three-Batman'>
-                        <div>
-                            <PageThree/>
-                        </div>
-                    </ScrollableSection>
-                    <ScrollableSection name='page-four-TodoList'>
-                        <div>
-                            <PageFour/>
-                        </div>
-                    </ScrollableSection>
-                    <ScrollableSection name='page-five-ScreenResolution'>
-                        <div>
-                            <PageFive/>
-                        </div>
-                    </ScrollableSection>
-                    <ScrollableSection name='page-six-QuoteGenerator'>
-                        <div>
-                            <PageSix/>
-                        </div>
-                    </ScrollableSection>
-                    <ScrollableSection name='page-seven-ColorGenerator'>
-                        <div>
-                            <PageSeven/>
-                        </div>
-                    </ScrollableSection>
-                </div>
+                <Main />
             </div>
         );
     }
