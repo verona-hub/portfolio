@@ -11,48 +11,41 @@ import PageFive from '../Pages/PageFive';
 import PageSix from '../Pages/PageSix';
 import PageSeven from '../Pages/PageSeven';
 
-const pageOne = '/';
-const pageTwo = 'page-two-WeatherApp';
-const pageThree = 'page-three-Batman';
-const pageFour = 'page-four-TodoList';
-const pageFive = 'page-five-ScreenResolution';
-const pageSix = 'page-six-QuoteGenerator';
-const pageSeven = 'page-seven-ColorGenerator';
 
 const MyComponent = () => {
     return (
-        <div className="pages-wrapper">
-            <ScrollableSection name= { pageOne }>
+        <div className="Main">
+            <ScrollableSection name='/'>
                 <div>
                     <PageOne/>
                 </div>
             </ScrollableSection>
-            <ScrollableSection name={ pageTwo }>
+            <ScrollableSection name='page-two-WeatherApp'>
                 <div>
                     <PageTwo/>
                 </div>
             </ScrollableSection>
-            <ScrollableSection name={ pageThree }>
+            <ScrollableSection name='page-three-Batman'>
                 <div>
                     <PageThree/>
                 </div>
             </ScrollableSection>
-            <ScrollableSection name={ pageFour }>
+            <ScrollableSection name='page-four-TodoList'>
                 <div>
                     <PageFour/>
                 </div>
             </ScrollableSection>
-            <ScrollableSection name={ pageFive }>
+            <ScrollableSection name='page-five-ScreenResolution'>
                 <div>
                     <PageFive/>
                 </div>
             </ScrollableSection>
-            <ScrollableSection name={ pageSix }>
+            <ScrollableSection name='page-six-QuoteGenerator'>
                 <div>
                     <PageSix/>
                 </div>
             </ScrollableSection>
-            <ScrollableSection name={ pageSeven }>
+            <ScrollableSection name='page-seven-ColorGenerator'>
                 <div>
                     <PageSeven/>
                 </div>
@@ -60,5 +53,6 @@ const MyComponent = () => {
         </div>
     );
 };
+
 
 export default MyComponent;

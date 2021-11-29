@@ -1,5 +1,6 @@
 import React from 'react';
 import activeNavbar from './ActiveNavbar';
+import ScrollToTop from '../ScrollToTop';
 
 
 const Navbar = () => {
@@ -46,6 +47,7 @@ const Navbar = () => {
                     </a>
                 </li>
             </ul>
+            <ScrollToTop />
         </div>
     );
 };

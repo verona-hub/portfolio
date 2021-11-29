@@ -4,7 +4,6 @@ const activeNavbar = () => {
     // Fix for page not resetting url on refresh
     const performanceNavigation = performance.getEntriesByType('navigation')[0].type;
     const forceHomepage = () => window.location.href = '/';
-
     performanceNavigation === 'reload' && forceHomepage();
 
 

@@ -94,7 +94,7 @@ a:active {
 */
 
 .Navbar {
-    bottom: 50px;
+    bottom: 100px;
     color: var(--whitesmoke);
     font-size: 1.4rem;
     position: fixed;
@@ -265,12 +265,31 @@ a:active {
     }
 }
 
+/*
++ ScrollToTop
+*/
+
+.ScrollToTop {
+    bottom: 30px;
+    position: fixed;
+    right: 30px;
+}
+
+.ScrollToTop img {
+    background-color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+
 
 /*
 + Main
 */
 
-.pages-wrapper {
+.Main {
     height: 100vh;
     overflow-y: scroll;
     position: relative;
