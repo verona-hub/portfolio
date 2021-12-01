@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -271,18 +272,10 @@ a:active {
 
 .ScrollToTop {
     bottom: 30px;
+    cursor: pointer;
     position: fixed;
     right: 30px;
 }
-
-.ScrollToTop img {
-    background-color: #fff;
-}
-
-.hidden {
-    display: none;
-}
-
 
 
 /*

@@ -1,3 +1,5 @@
+import React from 'react';
+
 
 const activeNavbar = () => {
 
@@ -5,7 +7,6 @@ const activeNavbar = () => {
     const performanceNavigation = performance.getEntriesByType('navigation')[0].type;
     const forceHomepage = () => window.location.href = '/';
     performanceNavigation === 'reload' && forceHomepage();
-
 
     setInterval(() => {
         const pathInView = window.location.pathname;
@@ -35,8 +36,8 @@ const activeNavbar = () => {
             // for homepage had to add it separately because path='/' and href='/page-one' were unmatching
             homepage && lightON();
         });
-    });
-}
+    }, 50);
+};
 
 
 export default activeNavbar;

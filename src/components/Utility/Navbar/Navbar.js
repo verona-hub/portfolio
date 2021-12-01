@@ -47,7 +47,9 @@ const Navbar = () => {
                     </a>
                 </li>
             </ul>
+
             <ScrollToTop />
+
         </div>
     );
 };
