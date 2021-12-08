@@ -510,7 +510,11 @@ a:active {
     margin: 30px;
 }
 
-.win-message button {
+/* Buttons */
+
+
+
+.Game button {
     background-color: var(--whitesmoke);
     border: 1px solid var(--dark_night);
     border-radius: 4px;
@@ -521,7 +525,15 @@ a:active {
     padding: 10px 25px;
 }
 
-.win-message button:hover {
+.start-game button {
+    margin-bottom: 50px;
+}
+
+.restart button {
+    margin-top: 50px;
+}
+
+.Game button:hover{
     background-color: var(--orange);
 }
 

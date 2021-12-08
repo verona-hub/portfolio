@@ -2,54 +2,95 @@ import React, { useState } from 'react';
 
 
 const PageEight = () => {
-    const cells = document.querySelectorAll('.cell');
-    const xTurn = 'x';
-    const oTurn = 'o';
-
     // State
     const [turn, setTurn] = useState('x');
+    const cells = [1,2,3,4,5,6,7,8,9];
 
+    const startGame = (e) => {
+        console.log('clicked!')
 
+        const board = document.getElementById('board');
+        const xTurn = 'x';
+        const oTurn = 'o';
 
-    function handleClick(e) {
-        // xTurn && setTurn('x');
-        // oTurn && setTurn('o');
-        cells.forEach(cell => {
-            cell.addEventListener('click', handleClick, { once: true });
-        });
+        const cell = e.target;
+        console.log(cell)
 
         if (turn === 'x') {
-            e.target.classList.add('x');
-            setTurn('o');
-        } else {
-            e.target.classList.add('circle');
-            setTurn('x');
+            cell.classList.add('x');
+            setTurn(oTurn);
+            console.log(turn)
+        }
+        if(turn === 'o') {
+            cell.classList.add('circle');
+            setTurn(xTurn);
+            console.log(turn)
         }
 
-
-        console.log(turn)
-        console.log(e.target)
     }
+    //
+    // cells.forEach(cell => {
+    //     cell.addEventListener('click', handleClick, { once: true });
+    // });
+    //     function handleClick(e) {
+    //         const cell = e.target;
+    //         console.log(cell)
+    //
+    //         if (turn === 'x') {
+    //             cell.classList.add('x');
+    //             setTurn(oTurn);
+    //             console.log(turn)
+    //         }
+    //         if(turn === 'o') {
+    //             cell.classList.add('circle');
+    //             setTurn(xTurn);
+    //             console.log(turn)
+    //         }
+    //
+    //         // xTurn && setTurn('x');
+    //         // oTurn && setTurn('o');
+    //     }
+    // }
+
+
+
+
+
 
     return (
-        <div id='page-eight-Game' className='Page page-eight'>
+        <div id='page-eight-Game' className='Page Game page-eight'>
             <h2> Turn: { turn } </h2>
-            <div id='board' className='board x' onClick={ handleClick }>
-                <div className='cell'> </div>
-                <div className='cell'> </div>
-                <div className='cell'> </div>
-                <div className='cell'> </div>
-                <div className='cell'> </div>
-                <div className='cell'> </div>
-                <div className='cell'> </div>
-                <div className='cell'> </div>
-                <div className='cell'> </div>
+            {/*<div className='start-game'>*/}
+            {/*    <button onClick={ startGame }> Start Game </button>*/}
+            {/*</div>*/}
+            <div id='board' className='board'>
+                {
+                    cells.map((a, index) => {
+                        return (
+                            <div key={index} className='cell' onClick={(e) => startGame(e) }> </div>
+                        )
+                    })
+                }
+                {/*<div className='cell'> </div>*/}
+                {/*<div className='cell'> </div>*/}
+                {/*<div className='cell'> </div>*/}
+                {/*<div className='cell'> </div>*/}
+                {/*<div className='cell'> </div>*/}
+                {/*<div className='cell'> </div>*/}
+                {/*<div className='cell'> </div>*/}
+                {/*<div className='cell'> </div>*/}
+                {/*<div className='cell'> </div>*/}
             </div>
+
+            <div className='restart'>
+                <button id='restart'> Restart </button>
+            </div>
+
             <div className='win-message'>
                 <div>
                     <h1> You won!!! </h1>
                 </div>
-                <button id='reset'> Reset </button>
+                <button id='reset' className='button-reset'> Reset </button>
             </div>
         </div>
     );
