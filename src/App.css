@@ -12,6 +12,7 @@
     --grey: #47576e;
     --link_visited: #ffb6c1;
     --link_active: #008080;
+    --orange: #e6761c;
     --page_odd: linear-gradient(to top, var(--dark_night), var(--dark_purple));
     --page_even: linear-gradient(to top, var(--dark_purple), var(--dark_night));
     --scrollbar: #5CECBF;
@@ -378,6 +379,11 @@ a:active {
     justify-content: center;
 }
 
+.page-eight h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
 .cell {
     align-items: center;
     border: 1px solid var(--whitesmoke);
@@ -480,7 +486,7 @@ a:active {
 /* Win message */
 .win-message {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(7, 7, 40, 0.95);
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -499,6 +505,7 @@ a:active {
 
 .win-message h1 {
     color: var(--whitesmoke);
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: 4rem;
     margin: 30px;
 }
@@ -506,14 +513,16 @@ a:active {
 .win-message button {
     background-color: var(--whitesmoke);
     border: 1px solid var(--dark_night);
+    border-radius: 4px;
+    color: var(--dark_night);
     cursor: pointer;
-    font-size: 2rem;
-    padding: 10px 20px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 10px 25px;
 }
 
 .win-message button:hover {
-    background-color: var(--scrollbar_hover);
-    color: var(--whitesmoke);
+    background-color: var(--orange);
 }
 
 /*
