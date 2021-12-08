@@ -511,9 +511,6 @@ a:active {
 }
 
 /* Buttons */
-
-
-
 .Game button {
     background-color: var(--whitesmoke);
     border: 1px solid var(--dark_night);

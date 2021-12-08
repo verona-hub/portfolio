@@ -7,24 +7,23 @@ const PageEight = () => {
     const cells = [1,2,3,4,5,6,7,8,9];
 
     const startGame = (e) => {
-        console.log('clicked!')
-
         const board = document.getElementById('board');
-        const xTurn = 'x';
-        const oTurn = 'o';
+        const playerX = 'x';
+        const playerXClass = 'x';
+        const playerO = 'o';
+        const playerOClass = 'circle';
+        console.log(playerO)
 
         const cell = e.target;
         console.log(cell)
 
         if (turn === 'x') {
-            cell.classList.add('x');
-            setTurn(oTurn);
-            console.log(turn)
+            cell.classList.add(playerXClass);
+            setTurn(playerO);
         }
         if(turn === 'o') {
-            cell.classList.add('circle');
-            setTurn(xTurn);
-            console.log(turn)
+            cell.classList.add(playerOClass);
+            setTurn(playerX);
         }
 
     }
