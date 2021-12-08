@@ -11,39 +11,45 @@ const Navbar = () => {
     return (
         <div className='Navbar'>
             <ul>
+                {/* Added curly braces on anchors because of IDE warning "cannot resolve anchor" */}
                 <li>
-                    <a href="#page-one">
+                    <a href={ '#page-one' }>
                         <span className='number'> 1 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-two-WeatherApp">
+                    <a href={ '#page-two-WeatherApp' }>
                         <span className='number'> 2 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-three-Batman">
+                    <a href={ '#page-three-Batman' }>
                         <span className='number'> 3 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-four-TodoList">
+                    <a href={ '#page-four-TodoList' }>
                         <span className='number'> 4 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-five-ScreenResolution">
+                    <a href={ '#page-five-ScreenResolution' }>
                         <span className='number'> 5 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-six-QuoteGenerator">
+                    <a href={ '#page-six-QuoteGenerator' }>
                         <span className='number'> 6 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#page-seven-ColorGenerator">
+                    <a href={ '#page-seven-ColorGenerator' }>
                         <span className='number'> 7 </span>
+                    </a>
+                </li>
+                <li>
+                    <a href={ '#page-eight-Game' }>
+                        <span className='number'> 8 </span>
                     </a>
                 </li>
             </ul>

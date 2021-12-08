@@ -10,6 +10,7 @@ import PageFour from "../Pages/PageFour";
 import PageFive from '../Pages/PageFive';
 import PageSix from '../Pages/PageSix';
 import PageSeven from '../Pages/PageSeven';
+import PageEight from '../Pages/PageEight';
 
 
 const MyComponent = () => {
@@ -48,6 +49,11 @@ const MyComponent = () => {
             <ScrollableSection name='page-seven-ColorGenerator'>
                 <div>
                     <PageSeven/>
+                </div>
+            </ScrollableSection>
+            <ScrollableSection name='page-eight-Game'>
+                <div>
+                    <PageEight/>
                 </div>
             </ScrollableSection>
         </div>
