@@ -10,36 +10,40 @@ const PageEight = () => {
         const board = document.getElementById('board');
         const cell = e.target;
 
-        const player_X = 'x';
-        const player_X_class = 'x';
-        const player_O = 'o';
-        const player_O_class = 'circle';
-
-
-        if (turn === 'x') {
-            if(cell.classList.contains(player_X_class)){
-                console.log('already contains X')
+        const player = {
+            x: {
+                turn: 'x',
+                class: 'x'
+            },
+            o: {
+                turn: 'o',
+                class: 'circle'
+            },
+            error: {
+                text: 'The cell is already occupied'
             }
-            else if (cell.classList.contains(player_O_class)) {
-                console.log('already contains Circle')
-            } else {
-                cell.classList.add(player_X_class);
-                setTurn(player_O);
+        }
+
+        const includesEitherClass = cell.classList.contains(player.x.class) || cell.classList.contains(player.o.class);
+
+        if (turn === player.x.turn) {
+            if(includesEitherClass){
+                alert(player.error.text)
+            }
+            else {
+                cell.classList.add(player.x.class);
+                setTurn(player.o.turn);
             }
 
         }
-        else {
-            if (cell.classList.contains(player_O_class)){
-                console.log('already contains Circle');
-            }
-            else if(cell.classList.contains(player_X_class)){
-                console.log('already contains X')
+        if (turn === player.o.turn) {
+            if (includesEitherClass){
+                alert(player.error.text);
             }
             else {
-                cell.classList.add(player_O_class);
-                setTurn(player_X);
+                cell.classList.add(player.o.class);
+                setTurn(player.x.turn);
             }
-
         }
 
     }
