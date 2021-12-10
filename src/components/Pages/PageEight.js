@@ -8,22 +8,38 @@ const PageEight = () => {
 
     const startGame = (e) => {
         const board = document.getElementById('board');
-        const playerX = 'x';
-        const playerXClass = 'x';
-        const playerO = 'o';
-        const playerOClass = 'circle';
-        console.log(playerO)
-
         const cell = e.target;
-        console.log(cell)
+
+        const player_X = 'x';
+        const player_X_class = 'x';
+        const player_O = 'o';
+        const player_O_class = 'circle';
+
 
         if (turn === 'x') {
-            cell.classList.add(playerXClass);
-            setTurn(playerO);
+            if(cell.classList.contains(player_X_class)){
+                console.log('already contains X')
+            }
+            else if (cell.classList.contains(player_O_class)) {
+                console.log('already contains Circle')
+            } else {
+                cell.classList.add(player_X_class);
+                setTurn(player_O);
+            }
+
         }
-        if(turn === 'o') {
-            cell.classList.add(playerOClass);
-            setTurn(playerX);
+        else {
+            if (cell.classList.contains(player_O_class)){
+                console.log('already contains Circle');
+            }
+            else if(cell.classList.contains(player_X_class)){
+                console.log('already contains X')
+            }
+            else {
+                cell.classList.add(player_O_class);
+                setTurn(player_X);
+            }
+
         }
 
     }
@@ -31,29 +47,6 @@ const PageEight = () => {
     // cells.forEach(cell => {
     //     cell.addEventListener('click', handleClick, { once: true });
     // });
-    //     function handleClick(e) {
-    //         const cell = e.target;
-    //         console.log(cell)
-    //
-    //         if (turn === 'x') {
-    //             cell.classList.add('x');
-    //             setTurn(oTurn);
-    //             console.log(turn)
-    //         }
-    //         if(turn === 'o') {
-    //             cell.classList.add('circle');
-    //             setTurn(xTurn);
-    //             console.log(turn)
-    //         }
-    //
-    //         // xTurn && setTurn('x');
-    //         // oTurn && setTurn('o');
-    //     }
-    // }
-
-
-
-
 
 
     return (
