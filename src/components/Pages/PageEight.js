@@ -11,26 +11,24 @@ const PageEight = () => {
         const cell = e.target;
 
         const player = {
-            xTurn: 'x',
-            xClass: 'x',
-            oTurn: 'o',
-            oClass: 'circle',
+            x: { turn: 'x', class: 'x' },
+            o: { turn: 'o', class: 'circle' },
             includesEitherClass(){
-                return cell.classList.contains(this.xClass) || cell.classList.contains(this.oClass);
+                return cell.classList.contains(this.x.class) || cell.classList.contains(this.o.class);
             },
             errorText: 'The cell is already occupied'
         }
 
-        if (turn === player.xTurn || turn === player.oTurn) {
+        if (turn === player.x.turn || turn === player.o.turn) {
             if(player.includesEitherClass()){
                 alert(player.errorText);
             }
-            else if (turn === player.xTurn) {
-                cell.classList.add(player.xClass);
-                setTurn(player.oTurn);
+            else if (turn === player.x.turn) {
+                cell.classList.add(player.x.class);
+                setTurn(player.o.turn);
             } else {
-                cell.classList.add(player.oClass);
-                setTurn(player.xTurn);
+                cell.classList.add(player.o.class);
+                setTurn(player.x.turn);
             }
         }
     }
