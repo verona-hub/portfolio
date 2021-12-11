@@ -2,63 +2,42 @@ import React, { useState } from 'react';
 
 
 const PageEight = () => {
+
     // State
     const [turn, setTurn] = useState('x');
     const cells = [1,2,3,4,5,6,7,8,9];
 
     const startGame = (e) => {
-        const board = document.getElementById('board');
         const cell = e.target;
 
         const player = {
-            x: {
-                turn: 'x',
-                class: 'x'
+            xTurn: 'x',
+            xClass: 'x',
+            oTurn: 'o',
+            oClass: 'circle',
+            includesEitherClass(){
+                return cell.classList.contains(this.xClass) || cell.classList.contains(this.oClass);
             },
-            o: {
-                turn: 'o',
-                class: 'circle'
-            },
-            error: {
-                text: 'The cell is already occupied'
-            }
+            errorText: 'The cell is already occupied'
         }
 
-        const includesEitherClass = cell.classList.contains(player.x.class) || cell.classList.contains(player.o.class);
-
-        if (turn === player.x.turn) {
-            if(includesEitherClass){
-                alert(player.error.text)
+        if (turn === player.xTurn || turn === player.oTurn) {
+            if(player.includesEitherClass()){
+                alert(player.errorText);
             }
-            else {
-                cell.classList.add(player.x.class);
-                setTurn(player.o.turn);
-            }
-
-        }
-        if (turn === player.o.turn) {
-            if (includesEitherClass){
-                alert(player.error.text);
-            }
-            else {
-                cell.classList.add(player.o.class);
-                setTurn(player.x.turn);
+            else if (turn === player.xTurn) {
+                cell.classList.add(player.xClass);
+                setTurn(player.oTurn);
+            } else {
+                cell.classList.add(player.oClass);
+                setTurn(player.xTurn);
             }
         }
-
     }
-    //
-    // cells.forEach(cell => {
-    //     cell.addEventListener('click', handleClick, { once: true });
-    // });
-
 
     return (
         <div id='page-eight-Game' className='Page Game page-eight'>
             <h2> Turn: { turn } </h2>
-            {/*<div className='start-game'>*/}
-            {/*    <button onClick={ startGame }> Start Game </button>*/}
-            {/*</div>*/}
             <div id='board' className='board'>
                 {
                     cells.map((a, index) => {
@@ -67,15 +46,6 @@ const PageEight = () => {
                         )
                     })
                 }
-                {/*<div className='cell'> </div>*/}
-                {/*<div className='cell'> </div>*/}
-                {/*<div className='cell'> </div>*/}
-                {/*<div className='cell'> </div>*/}
-                {/*<div className='cell'> </div>*/}
-                {/*<div className='cell'> </div>*/}
-                {/*<div className='cell'> </div>*/}
-                {/*<div className='cell'> </div>*/}
-                {/*<div className='cell'> </div>*/}
             </div>
 
             <div className='restart'>
