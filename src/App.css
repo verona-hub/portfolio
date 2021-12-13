@@ -8,6 +8,7 @@
 
 :root {
     --dark_purple: #070728;
+    --dark_purple_gradient: rgba(7, 7, 40, 0.95);
     --dark_night: #0e0e15;
     --grey: #47576e;
     --link_visited: #ffb6c1;
@@ -487,7 +488,7 @@ a:active {
 .win-message,
 .error-message {
     align-items: center;
-    background-color: rgba(7, 7, 40, 0.95);
+    background-color: var(--dark_purple_gradient);
     display: none;
     flex-direction: column;
     justify-content: center;
