@@ -9,6 +9,8 @@ const PageEight = () => {
 
     const startGame = (e) => {
         const cell = e.target;
+        const errorMessage = document.querySelector('.error-message');
+        const errorButton = document.getElementById('error-button');
 
         const player = {
             x: { turn: 'x', class: 'x' },
@@ -21,7 +23,11 @@ const PageEight = () => {
 
         if (turn === player.x.turn || turn === player.o.turn) {
             if(player.includesEitherClass()){
-                alert(player.errorText);
+                errorMessage.classList.toggle('show');
+
+                errorButton.onclick = () => {
+                    errorMessage.classList.toggle('show');
+                }
             }
             else if (turn === player.x.turn) {
                 cell.classList.add(player.x.class);
@@ -51,10 +57,13 @@ const PageEight = () => {
             </div>
 
             <div className='win-message'>
-                <div>
-                    <h1> You won!!! </h1>
-                </div>
-                <button id='reset' className='button-reset'> Reset </button>
+                <div><h1> You won!!! </h1></div>
+                <button id='win-message'> Reset </button>
+            </div>
+
+            <div className='error-message'>
+                <h2> This cell is occupied. Try a different one. </h2>
+                <button id='error-button'> Click here to continue </button>
             </div>
         </div>
     );
