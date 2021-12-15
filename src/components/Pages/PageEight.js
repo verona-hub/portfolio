@@ -26,14 +26,13 @@ const PageEight = () => {
 
     const cellClick = (e) => {
         const currentCell = e.target;
-        // Place the mark
-        placeMark(currentCell);
-        // Start the hover effect
-        hoverShadow();
+        const includesEitherClass = currentCell.classList.contains(cell.x.class) || currentCell.classList.contains(cell.circle.class);
+
+        // Place the mark X or O
+        placeMark(currentCell, includesEitherClass);
     };
 
-    const placeMark = (currentCell) => {
-        const includesEitherClass = currentCell.classList.contains(cell.x.class) || currentCell.classList.contains(cell.circle.class);
+    const placeMark = (currentCell, includesEitherClass) => {
 
         if (includesEitherClass){
             showErrorMessage();
@@ -41,7 +40,10 @@ const PageEight = () => {
             turn === cell.x.turn
                 ? currentCell.classList.add(cell.x.class)
                 : currentCell.classList.add(cell.circle.class);
+            // Switch Turn
             switchTurn();
+            // Start the hover effect
+            hoverShadow();
         }
     };
 
@@ -59,6 +61,7 @@ const PageEight = () => {
         turn === cell.x.turn
             ? board.classList.add(cell.circle.class)
             : board.classList.add(cell.x.class);
+
     };
 
     const showErrorMessage = () => {
