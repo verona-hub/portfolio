@@ -16,7 +16,8 @@ const PageEight = () => {
     // Do you want to play a game ? component appears : null
     // Move everything inside this function
     const startGame = () => {
-        // console.log('The game started');
+        console.log('The game started');
+
     };
 
     const cell = {
@@ -61,7 +62,6 @@ const PageEight = () => {
         turn === cell.x.turn
             ? board.classList.add(cell.circle.class)
             : board.classList.add(cell.x.class);
-
     };
 
     const showErrorMessage = () => {
@@ -78,7 +78,7 @@ const PageEight = () => {
         <div id='page-eight-Game' className='Page Game page-eight'>
             <button onClick={ () => startGame() }> Start the game </button>
             <h2> Turn: { turn } </h2>
-            <div id='board' className='board'>
+            <div id='board' className='board x'>
                 {
                     cellElements.map((a, index) => {
                         return (
