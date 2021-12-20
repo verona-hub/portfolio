@@ -10,7 +10,7 @@ const PageFive = () => {
                  'The ruler also displays the current viewport width.';
 
     return (
-        <div id='page-five-ScreenResolution' className='Page page-five'>
+        <div id='page-five-screen-resolution' className='Page page-five'>
             <ShowCase
                 title='Screen Resolution'
                 image={ image }

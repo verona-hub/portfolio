@@ -3,37 +3,55 @@ import React, { useState } from 'react';
 
 const PageEight = () => {
 
-    // State
-    const [turn, setTurn] = useState('x');
-
     const cellElements = [1,2,3,4,5,6,7,8,9];
+    const initialBoard = () => {
+        {
+            return cellElements.map((a, index) => {
+                return (
+                    <div key={index} id='cell' onClick={ cellClick }> </div>
+                )
+            })
+        }
+    };
+
+    // State
+    const [startGame, setStartGame] = useState(false);
+    const [board, setBoard] = useState(null);
+    const [turn, setTurn] = useState('x');
+    const [winner, setWinner] = useState(null);
 
     const errorButton = document.getElementById('error-button');
-    const restartButton = document.getElementById('restart-button');
+    const quitButton = document.getElementById('quit');
     const errorMessage = document.querySelector('.error-message');
 
     // TODO
     // Do you want to play a game ? component appears : null
     // Move everything inside this function
-    const startGame = () => {
-        console.log('The game started');
-
-    };
+    function initialiseGame() {
+        console.log('The game initialised');
+        setStartGame(true);
+        setBoard(initialBoard);
+        setWinner(null);
+    }
 
     const cell = {
         x: { turn: 'x', class: 'x' },
         circle: { turn: 'o', class: 'circle' }
-    };
+    }
 
-    const cellClick = (e) => {
+    function cellClick(e) {
+        const cells = document.querySelectorAll('#cell');
+        const cellsArray = Array.from(cells);
         const currentCell = e.target;
+        const currentClass = currentCell.classList;
         const includesEitherClass = currentCell.classList.contains(cell.x.class) || currentCell.classList.contains(cell.circle.class);
 
         // Place the mark X or O
-        placeMark(currentCell, includesEitherClass);
-    };
+        placeMark(currentCell, includesEitherClass, cellsArray, currentClass);
 
-    const placeMark = (currentCell, includesEitherClass) => {
+    }
+
+    function placeMark(currentCell, includesEitherClass, cellsArray, currentClass) {
 
         if (includesEitherClass){
             showErrorMessage();
@@ -46,15 +64,19 @@ const PageEight = () => {
             // Start the hover effect
             hoverShadow();
         }
-    };
 
-    const switchTurn = () => {
+        // Check if there is a winner
+        checkWinner(cellsArray, currentClass);
+
+    }
+
+    function switchTurn() {
         turn === cell.x.turn
             ? setTurn(cell.circle.turn)
             : setTurn(cell.x.turn);
-    };
+    }
 
-    const hoverShadow = () => {
+    function hoverShadow() {
         const board = document.querySelector('.board');
         board.classList.remove(cell.x.class);
         board.classList.remove(cell.circle.class);
@@ -62,46 +84,116 @@ const PageEight = () => {
         turn === cell.x.turn
             ? board.classList.add(cell.circle.class)
             : board.classList.add(cell.x.class);
-    };
+    }
 
-    const showErrorMessage = () => {
+    function checkWinner(cellsArray, currentClass) {
+
+        let combinations = {
+            horizontal: [
+                [0, 1, 2],
+                [3, 4, 5],
+                [6, 7, 8]
+            ],
+            vertical: [
+                [0, 3, 6],
+                [1, 4, 7],
+                [2, 5, 8],
+            ],
+            diagonal: [
+                [0, 4, 8],
+                [2, 4, 6]
+            ]
+        };
+
+        currentClass = currentClass[0];
+
+        for(let combination in combinations){
+            combinations[combination].forEach(pattern => {
+                if(
+                    cellsArray[pattern[0]].classList.contains(currentClass) === cellsArray[pattern[1]].classList.contains(currentClass) &&
+                    cellsArray[pattern[1]].classList.contains(currentClass) === cellsArray[pattern[2]].classList.contains(currentClass)
+                ){
+                    // console.log('Equals!')
+                    // setWinner(currentClass);
+                    // switchTurn();
+                    // IF WINNER ?
+                    // setBoard(null);
+                } else {
+                    // console.log('are not equal')
+                }
+
+                // if(
+                //     cellsArray[pattern[0]] === '' ||
+                //     cellsArray[pattern[1]] === '' ||
+                //     cellsArray[pattern[2]] === ''
+                // ){
+                //     // do nothing
+                //     console.log('if statement')
+                // } else if (
+                //     cellsArray[pattern[0]] === cellsArray[pattern[1]] &&
+                //     cellsArray[pattern[1]] === cellsArray[pattern[2]]
+                // ){
+                //     setWinner(cellsArray[pattern[0]]);
+                // }
+            });
+        }
+    }
+
+    function showErrorMessage() {
         errorButton.onclick = () => {
-            restartButton.addEventListener('click', () => {
-                console.log('restart game');
+            quitButton.addEventListener('click', () => {
+                console.log('quit the game');
             });
             errorMessage.classList.toggle('show');
         };
         return errorMessage.classList.toggle('show');
-    };
+    }
+
+    function quitGame() {
+        setStartGame(false);
+        setWinner(null);
+        setTurn(cell.x.turn);
+    }
+
+
 
     return (
-        <div id='page-eight-Game' className='Page Game page-eight'>
-            <button onClick={ () => startGame() }> Start the game </button>
-            <h2> Turn: { turn } </h2>
-            <div id='board' className='board x'>
-                {
-                    cellElements.map((a, index) => {
-                        return (
-                            <div key={index} className='cell' onClick={ cellClick }> </div>
-                        )
-                    })
-                }
-            </div>
+        <div id='page-eight-game' className='Page Game page-eight'>
+            {
+                !startGame ? (
+                        <div>
+                            <h1> Work in progress... </h1>
+                            <h2> Do you want to play a Game? </h2>
+                            <button onClick={ initialiseGame }> Yes </button>
+                        </div>
+                    )
+                    :
+                    (
+                        <div>
+                            <h2> Turn: { turn } </h2>
+                            <div id='board' className='board x'>
+                                { board && initialBoard() }
+                            </div>
+                            <button id='quit' onClick={ quitGame }> Quit </button>
 
-            <div className='restart'>
-                <button id="restart-button"> Restart </button>
-            </div>
+                            {
+                                winner && (
+                                    <div className='win-message'>
+                                        <h1> { winner } won!!! </h1>
+                                        <button id='play-again' onClick={ initialiseGame }> Play again </button>
+                                        <button id='reset' onClick={ quitGame }> Quit </button>
+                                    </div>
+                                )
+                            }
 
-            <div className='win-message'>
-                <div><h1> You won!!! </h1></div>
-                <button id='reset-button2'> Reset </button>
-            </div>
-
-            <div className='error-message'>
-                <h2> This cell is occupied. </h2>
-                <h2> Try a different one. </h2>
-                <button id='error-button'> Continue </button>
-            </div>
+                            <div className='error-message'>
+                                <h2> This cell is occupied. </h2>
+                                <h2> Try a different one. </h2>
+                                <button id='error-button'> Continue </button>
+                            </div>
+                        </div>
+                    )
+            }
         </div>
     );
 };

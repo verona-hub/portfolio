@@ -9,7 +9,7 @@ const PageTwo = () => {
     const info2 = 'A simple search input fetching data from a weather Api. The images change based on the returned data.';
 
     return (
-        <div id='page-two-WeatherApp' className='Page page-two'>
+        <div id='page-two-weather-app' className='Page page-two'>
             <ShowCase
                 title='Weather App'
                 image={ image }

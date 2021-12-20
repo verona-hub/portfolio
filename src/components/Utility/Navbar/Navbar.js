@@ -18,37 +18,37 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <a href={ '#page-two-WeatherApp' }>
+                    <a href={ '#page-two-weather-app' }>
                         <span className='number'> 2 </span>
                     </a>
                 </li>
                 <li>
-                    <a href={ '#page-three-Batman' }>
+                    <a href={ '#page-three-batman' }>
                         <span className='number'> 3 </span>
                     </a>
                 </li>
                 <li>
-                    <a href={ '#page-four-TodoList' }>
+                    <a href={ '#page-four-todo-list' }>
                         <span className='number'> 4 </span>
                     </a>
                 </li>
                 <li>
-                    <a href={ '#page-five-ScreenResolution' }>
+                    <a href={ '#page-five-screen-resolution' }>
                         <span className='number'> 5 </span>
                     </a>
                 </li>
                 <li>
-                    <a href={ '#page-six-QuoteGenerator' }>
+                    <a href={ '#page-six-quote-generator' }>
                         <span className='number'> 6 </span>
                     </a>
                 </li>
                 <li>
-                    <a href={ '#page-seven-ColorGenerator' }>
+                    <a href={ '#page-seven-color-generator' }>
                         <span className='number'> 7 </span>
                     </a>
                 </li>
                 <li>
-                    <a href={ '#page-eight-Game' }>
+                    <a href={ '#page-eight-game' }>
                         <span className='number'> 8 </span>
                     </a>
                 </li>

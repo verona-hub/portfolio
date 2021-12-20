@@ -10,7 +10,7 @@ const PageSeven = () => {
                   'If clicked on the hex or rgb box, the value will be copied to the clipboard.';
 
     return (
-        <div id='page-seven-ColorGenerator' className='Page page-seven'>
+        <div id='page-seven-color-generator' className='Page page-seven'>
             <ShowCase
                 title='Random Color Generator'
                 image={ image }

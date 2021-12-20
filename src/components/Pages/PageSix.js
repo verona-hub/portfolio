@@ -9,7 +9,7 @@ const PageSix = () => {
     const info2 = 'A random quote is displayed on button click or spacebar/enter keypress. On each shuffle, the background image is also changed.';
 
     return (
-        <div id='page-six-QuoteGenerator' className='Page page-six'>
+        <div id='page-six-quote-generator' className='Page page-six'>
             <ShowCase
                 title='Quote Generator'
                 image={ image }

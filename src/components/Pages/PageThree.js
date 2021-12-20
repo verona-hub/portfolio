@@ -9,7 +9,7 @@ const PageThree = () => {
     const info2 ='A landing page with parallax and some hover effects.';
 
     return (
-        <div id='page-three-Batman' className='Page page-three'>
+        <div id='page-three-batman' className='Page page-three'>
             <ShowCase
                 title='Batman Fansite'
                 image={ image }

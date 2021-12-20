@@ -9,7 +9,7 @@ const PageFour = () => {
     const info2 = 'A todo list with options to modify, mark as completed, or delete a task.';
 
     return (
-        <div id='page-four-TodoList' className='Page page-four'>
+        <div id='page-four-todo-list' className='Page page-four'>
             <ShowCase
                 title='Todo List'
                 image={ image }
